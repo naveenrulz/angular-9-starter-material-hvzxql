@@ -3,7 +3,10 @@ import { FormGroup } from "@angular/forms";
 import { FieldConfig } from "../field.interface";
 @Component({
   selector: "app-input",
-  template: `<input matInput [formControlName]="field.name" [placeholder]="field.label" [type]="field.inputType">
+  template: `
+  <div [formGroup]="group">
+  <input matInput [formControlName]="field.name" [placeholder]="field.label" [type]="field.inputType">
+  </div>
 `,
   styles: []
 })
