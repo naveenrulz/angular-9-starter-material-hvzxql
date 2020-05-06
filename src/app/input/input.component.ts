@@ -3,7 +3,7 @@ import { FormGroup } from "@angular/forms";
 import { FieldConfig } from "../field.interface";
 @Component({
   selector: "app-input",
-  template: `<h1>Input</h1>
+  template: `<input matInput [formControlName]="field.name" [placeholder]="field.label" [type]="field.inputType">
 `,
   styles: []
 })

@@ -1,13 +1,12 @@
-<p>
-	Start editing to see some magic happen :)
-</p>
-
-<form [formGroup]="form">
-	<input  type="email"
-          name="Email"
-          [formControl]="form.controls['Email']"
-        />
-        <p *ngIf="form.controls['Email'].error"> Invalid</p>
-       
- </form> 
- {{getValue(form.get('Email')) | json}}
+<div class="form">
+  <div style="text-align:center">
+    <h1>
+      Registration Form
+    </h1>
+  </div>
+  <dynamic-form [fields]="regConfig" (submit)="submit($event)">
+  </dynamic-form>
+  <!-- <div class="margin-top">
+    {{ form.value | json }}
+  </div> -->
+</div>
